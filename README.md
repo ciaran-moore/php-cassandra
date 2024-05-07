@@ -5,10 +5,10 @@ Cassandra client library for PHP
 <a href="https://scrutinizer-ci.com/g/duoshuo/php-cassandra/"><img src="https://scrutinizer-ci.com/g/duoshuo/php-cassandra/badges/quality-score.png?b=master" /></a>
 <a href="https://scrutinizer-ci.com/g/duoshuo/php-cassandra/"><img src="https://scrutinizer-ci.com/g/duoshuo/php-cassandra/badges/build.png?b=master" /></a>
 
-Cassandra client library for PHP, which support Protocol v3 (Cassandra 2.1) and asynchronous request 
+Cassandra client library for PHP, which support Protocol v4 (Cassandra 4) and asynchronous request 
 
 ## Features
-* Using Protocol v3 (Cassandra 2.1)
+* Using Protocol v4 (Cassandra 4)
 * Support ssl/tls with stream transport layer
 * Support asynchronous and synchronous request
 * Support for logged, unlogged and counter batches
@@ -232,6 +232,18 @@ All types are supported.
 
 //  Inet
     new Cassandra\Type\Inet('127.0.0.1');
+
+// Date
+    new Cassandra\Type\Date(date('Y-m-d', strtotime('now')));
+
+// Time
+    new Cassandra\Type\Time(date('H:i:s', strtotime('now')));
+
+// Smallint
+    new Cassandra\Type\SmallInt(32700);
+
+// Tinyint
+    new Cassandra\Type\TinyInt(255);
 
 //  Int
     new Cassandra\Type\PhpInt(1);

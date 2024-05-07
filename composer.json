@@ -1,6 +1,6 @@
 {
 	"name": "duoshuo/php-cassandra",
-	"description": "Cassandra client library for PHP, which support Protocol v3 and asynchronous request",
+	"description": "Cassandra client library for PHP, which support Protocol v4 and asynchronous request",
 	"minimum-stability": "stable",
 	"keywords" : [
 		"cassandra",
@@ -18,6 +18,10 @@
 		{
 			"name": "Evseev Nikolay",
 			"email": "evseevnn@gmail.com"
+		},
+		{
+			"name": "Ciaran Moore",
+			"email": "ciaran.f.moore@gmail.com"
 		}
 	],
 	"require": {

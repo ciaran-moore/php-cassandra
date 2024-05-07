@@ -13,13 +13,16 @@ abstract class Base{
     const DOUBLE = 0x0007;
     const FLOAT = 0x0008;
     const INT = 0x0009;
-    const TEXT = 0x000A;        // deprecated in Protocol v3
     const TIMESTAMP = 0x000B;
     const UUID = 0x000C;
     const VARCHAR = 0x000D;
     const VARINT = 0x000E;
     const TIMEUUID = 0x000F;
     const INET = 0x0010;
+    const DATE = 0x0011;
+    const TIME = 0x0012;
+    const SMALLINT = 0x0013;
+    const TINYINT = 0x0014;
     const COLLECTION_LIST = 0x0020;
     const COLLECTION_MAP = 0x0021;
     const COLLECTION_SET = 0x0022;
@@ -29,7 +32,6 @@ abstract class Base{
     public static $typeClassMap = [
         self::ASCII     => 'Cassandra\Type\Ascii',
         self::VARCHAR   => 'Cassandra\Type\Varchar',
-        self::TEXT      => 'Cassandra\Type\Varchar',  // deprecated in Protocol v3
         self::VARINT    => 'Cassandra\Type\Varint',
         self::BIGINT    => 'Cassandra\Type\Bigint',
         self::COUNTER   => 'Cassandra\Type\Counter',
@@ -43,6 +45,10 @@ abstract class Base{
         self::UUID      => 'Cassandra\Type\Uuid',
         self::TIMEUUID  => 'Cassandra\Type\Timeuuid',
         self::INET      => 'Cassandra\Type\Inet',
+        self::DATE       => 'Cassandra\Type\Date',
+        self::TIME       => 'Cassandra\Type\Time',
+        self::SMALLINT       => 'Cassandra\Type\SmallInt',
+        self::TINYINT        => 'Cassandra\Type\TinyInt',
         self::COLLECTION_LIST => 'Cassandra\Type\CollectionList',
         self::COLLECTION_SET  => 'Cassandra\Type\CollectionSet',
         self::COLLECTION_MAP  => 'Cassandra\Type\CollectionMap',

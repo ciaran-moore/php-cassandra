@@ -9,7 +9,7 @@ class Connection {
      * @var array
      */
     protected $_options = [
-        'CQL_VERSION' => '3.0.0'
+        'CQL_VERSION' => '4.0.0'
     ];
 
     /**
@@ -179,7 +179,7 @@ class Connection {
                 
                 return $response;
             default:
-                throw new Exception('php-cassandra supports CQL binary protocol v3 only, please upgrade your Cassandra to 2.1 or later.');
+                throw new Exception('php-cassandra supports CQL binary protocol v3+ only, please upgrade your Cassandra to 2.1 or later.');
         }
     }
     

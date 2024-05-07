@@ -30,6 +30,14 @@ class Startup extends Request{
 	 * different from the protocol version.
 	 * - "COMPRESSION": the compression algorithm to use for frames (See section 5).
 	 * This is optional, if not specified no compression will be used.
+     * - "NO_COMPACT": whether or not connection has to be established in compatibility
+     * mode. This mode will make all Thrift and Compact Tables to be exposed as if
+     * they were CQL Tables. This is optional; if not specified, the option will
+     * not be used.
+     * - "THROW_ON_OVERLOAD": In case of server overloaded with too many requests, by 
+     * default the server puts back pressure on the client connection. Instead, the server 
+     * can send an OverloadedException error message back to the client if this option is 
+     * set to true.
 	 *
 	 * @param array $options
 	 */
